@@ -1,0 +1,39 @@
+package com.qa.GarageProject;
+
+public abstract  class Vehicle {
+	private int numWheels;
+	private int fuelType;
+	private String colour;
+	private int vehicleID;
+	private int price;
+	
+	public Vehicle(int price) {
+		this.setPrice(price);
+	}
+	
+	public abstract void drive();
+	public abstract void reverse();
+	public abstract void park();
+	
+	public int getNumWheels() {return numWheels;}
+	public void setNumWheels(int numWheels) {this.numWheels = numWheels;}
+	
+	public int getFuelType() {return fuelType;}
+	public void setFuelType(int fuelType) {this.fuelType = fuelType;}
+	
+	public int getVehicleID() {return vehicleID;}
+
+	public void setVehicleID(int vehicleID) {this.vehicleID = vehicleID;}
+
+	public String getColour() {return colour;}
+	public void setColour(String colour) {this.colour = colour;}
+
+	public int getPrice() {return price;}
+
+	public void setPrice(int price) {this.price = price;}
+
+
+	
+	
+
+}

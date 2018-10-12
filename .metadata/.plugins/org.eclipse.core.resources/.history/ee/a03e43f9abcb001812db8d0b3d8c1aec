@@ -1,0 +1,21 @@
+package com.qa.ArrayListExample;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class ArrayListStreams {
+	public static void evenOnlyStreams(List<Integer> numbers) {
+		List<Integer> solution = new ArrayList<>();
+		for (int i = 0; i < numbers.size(); i++) {
+			if (!((numbers.get(i) % 2) == 0))
+				solution.add(numbers.get(i));
+		}
+		printList(solution);
+		// numbers = numbers.stream().filter(numbers
+		// ->numbers.removeIf(filter)).collect(Collectors.toList());
+
+	}
+}

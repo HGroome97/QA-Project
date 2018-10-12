@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ReverseString {
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5, 9, 8, 12);
+		// printList(numbers);
+		// sortList(numbers);
+		evenOnly(numbers);
+	}
+
+	public static void printList(List<Integer> numbers) {
+		numbers.stream().forEach(System.out::println);
+
+	}
+
+	public static void evenOnly(List<Integer> numbers) {
+		List<Integer> solution = new ArrayList<>();
+		for (int i : numbers) {
+			System.out.println(numbers.get(i));
+			if (!((numbers.get(i) % 2) == 0)) {
+				solution.add(i);
+			}
+		}
+		//printList(solution);
+		// numbers = numbers.stream().filter(numbers ->
+		// numbers.removeIf(filter)).collect(Collectors.toList());
+
+	}
+
+	public static void sortList(List<Integer> numbers) {
+		numbers.stream().sorted().forEach(System.out::println);
+
+	}
+}

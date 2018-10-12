@@ -1,0 +1,23 @@
+package com.qa.Library;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		System.out.println(reverseFac(7));
+
+	}
+
+	public static int reverseFac(double n) {
+		int i;
+		for (i = 2; i < n; i++) {
+			n = n / i;
+		}
+		if (Math.floor(n) == n) {
+			return i;
+		} else {
+			System.out.println("NONE");
+			return 0;
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.qa.GarageProject;
+
+public class MonsterTruck extends Vehicle {
+	private int regPlate;
+	
+	public MonsterTruck(int regPlate, int price, int numWheels, String colour, int vehicleID){
+		super(price, numWheels, colour, vehicleID); 
+		this.regPlate = regPlate;
+	}
+	public void drive() {}
+	public void reverse() {}
+	public void park() {}
+	public void jump() {}
+	
+
+}

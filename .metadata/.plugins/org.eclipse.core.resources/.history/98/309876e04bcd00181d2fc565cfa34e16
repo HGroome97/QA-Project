@@ -1,0 +1,11 @@
+package com.qa.Library;
+
+public class GovernmentDocs extends LibraryItem{
+	private int numPages;
+	
+	public GovernmentDocs(int itemID,  String itemTitle, String itemDepartment,Boolean available, int numPages){
+		super(itemID,  itemTitle, itemDepartment, available); 
+		this.numPages = numPages;
+	}
+
+}

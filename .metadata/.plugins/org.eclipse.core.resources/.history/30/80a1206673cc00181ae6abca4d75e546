@@ -1,0 +1,57 @@
+package com.qa.Delegate;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		/*Delegate d1 = new Delegate("Hello");
+		Delegate d2 = new Delegate("World");
+		d1.remove();
+		d1.changeStream();
+		d1.setUID(99);
+		System.out.println(d1.getUID());
+		System.out.println(d2.getUID());
+		d2.setUID(123);
+		System.out.println(d2.getUID());
+		System.out.println(d1.getName());
+		System.out.println(d2.getName());*/
+		
+		Person p1 = new Person("Geoff");
+		p1.setAge(21);
+		p1.setJobTitle("Bin Man");
+		//System.out.println(p1.toString());
+		Person p2 = new Person("Jeff");
+		p2.setAge(24);
+		p2.setJobTitle("Unemployed");
+		//System.out.println(p2.toString());
+		Person p3 = new Person("Geoff");
+		p3.setAge(2123423);
+		p3.setJobTitle("Pilot");
+		//System.out.println(p3.toString());
+		
+		List<Person> PeopleList = new ArrayList<Person>();
+		PeopleList.add(p1);
+		PeopleList.add(p2);
+		PeopleList.add(p3);
+		
+		PeopleList.stream().forEach(System.out::println);
+		
+		System.out.println(searchByName("Geoff", PeopleList));
+		System.out.println(searchByNameIdvd("Jeff", PeopleList));
+		
+	}
+	
+	public static List<Person> searchByName(String name, List<Person> PeopleList) {
+		PeopleList = PeopleList.stream().filter(n -> n.getName()==name).collect(Collectors.toList());
+		return PeopleList;
+	}
+	public static Person searchByNameIdvd(String name, List<Person> PeopleList) {
+		PeopleList = PeopleList.stream().filter(n -> n.getName()==name).collect(Collectors.toList());
+		Person output = PeopleList.get(0);
+		return output;
+	}
+}

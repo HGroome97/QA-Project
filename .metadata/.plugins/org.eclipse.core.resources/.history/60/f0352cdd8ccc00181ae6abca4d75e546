@@ -1,0 +1,22 @@
+package com.qa.GarageProject;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Garage {
+	private List<Object> garageList;
+
+	public List<Object> getGarageList() {
+		return garageList;
+	}
+
+	public void setGarageList(Object vehicle) {
+		this.garageList.add(vehicle);
+	}
+
+	public int calculateVehiclePrice(Vehicle vehicleType) {
+		setGarageList(getGarageList().stream().filter(n -> n.getClass() == vehicleType.getClass()).collect(Collectors.toList()));
+		return getGarageList().size() * vehicleType.getPrice();
+	}
+
+}

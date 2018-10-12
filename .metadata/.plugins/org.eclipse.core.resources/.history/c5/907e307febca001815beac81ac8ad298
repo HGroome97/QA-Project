@@ -1,0 +1,29 @@
+
+public class Calculator {
+	public static void main(String[] args) {
+		System.out.println(addNumbers(10, 20));
+		System.out.println(multNumbers(10, 20));
+		System.out.println(subNumbers(10, 20));
+		System.out.println(divNumbers(10, 20));
+	}
+
+	public static Integer addNumbers(int num1, int num2) {
+		int num3 = num1 + num2;
+		return num3;
+	}
+
+	public static Integer multNumbers(int num1, int num2) {
+		int num3 = num1 * num2;
+		return num3;
+	}
+
+	public static Integer subNumbers(int num1, int num2) {
+		int num3 = num1 - num2;
+		return num3;
+	}
+
+	public static Integer divNumbers(int num1, int num2) {
+		int num3 = num1 / num2;
+		return num3;
+	}
+}

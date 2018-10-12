@@ -1,0 +1,17 @@
+1539250696816	Delete element
+1539250704016	Delete element
+1539252323888	Move compilation unit
+1539252965861	Encapsulate field 'itemList'
+1539253099961	Encapsulate field 'customerList'
+1539253736301	Move compilation unit
+1539256091414	Encapsulate field 'itemID'
+1539256094672	Encapsulate field 'itemTitle'
+1539256098363	Encapsulate field 'itemDepartment'
+1539257313130	Encapsulate field 'available'
+1539258038108	Encapsulate field 'customerID'
+1539258043053	Encapsulate field 'customerName'
+1539258049333	Encapsulate field 'customerAddress'
+1539258052968	Encapsulate field 'customerPhoneNumber'
+1539258770360	Encapsulate field 'numPages'
+1539258842967	Encapsulate field 'govDepartment'
+1539258869642	Encapsulate field 'areaCovered'

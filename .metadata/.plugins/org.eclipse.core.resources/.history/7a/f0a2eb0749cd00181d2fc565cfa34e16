@@ -1,0 +1,11 @@
+package com.qa.Library;
+
+public class Book extends LibraryItem{
+	private int numPages;
+	
+	public Book(int itemID,  String itemTitle, String itemDepartment, int numPages){
+		super(itemID,  itemTitle, itemDepartment); 
+		this.numPages = numPages;
+	}
+
+}

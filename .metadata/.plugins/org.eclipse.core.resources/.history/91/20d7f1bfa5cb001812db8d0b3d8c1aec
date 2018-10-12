@@ -1,0 +1,95 @@
+package com.qa.ArrayListExample;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class ArrayListExample {
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5, 9, 8, 12);
+		// printList(numbers);
+		// sortList(numbers);
+		// evenOnly(numbers);
+		// tenTimes(numbers);
+		// highestOnly(numbers);
+		// lowestOnly(numbers);
+		//squareNew(numbers);
+		uniqueSquare(numbers);
+	}
+
+	public static void printList(List<Integer> numbers) {
+		numbers.stream().forEach(System.out::println);
+
+	}
+
+	public static void evenOnly(List<Integer> numbers) {
+		List<Integer> solution = new ArrayList<>();
+		for (int i = 0; i < numbers.size(); i++) {
+			if (!((numbers.get(i) % 2) == 0))
+				solution.add(numbers.get(i));
+		}
+		printList(solution);
+		// numbers = numbers.stream().filter(numbers
+		// ->numbers.removeIf(filter)).collect(Collectors.toList());
+
+	}
+
+	public static void tenTimes(List<Integer> numbers) {
+		List<Integer> solution = new ArrayList<>();
+		for (int i = 0; i < numbers.size(); i++) {
+			for (int j = 0; j < 10; j++)
+				solution.add(numbers.get(i));
+		}
+		printList(solution);
+
+	}
+
+	public static void highestOnly(List<Integer> numbers) {
+		int max = -10000;
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) > max)
+				max = numbers.get(i);
+		}
+		System.out.println(max);
+
+	}
+
+	public static void lowestOnly(List<Integer> numbers) {
+		int min = 10000;
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) < min)
+				min = numbers.get(i);
+		}
+		System.out.println(min);
+
+	}
+
+	public static void squareNew(List<Integer> numbers) {
+		List<Integer> solution = new ArrayList<>();
+		for (int i = 0; i < numbers.size(); i++) {
+			solution.add(numbers.get(i) * numbers.get(i));
+		}
+		printList(solution);
+
+	}
+
+	public static void uniqueSquare(List<Integer> numbers) {
+		List<Integer> temp = new ArrayList<>();
+		for (int i = 0; i < numbers.size(); i++) {
+			temp.add(numbers.get(i) * numbers.get(i));
+		}
+		printList(temp);
+		List<Integer> solution = new ArrayList<>();
+		Set<Integer> hs = new HashSet<>();
+		hs.addAll(temp);
+		solution.addAll(hs);
+		printList(solution);
+	}
+
+	public static void sortList(List<Integer> numbers) {
+		numbers.stream().sorted().forEach(System.out::println);
+
+	}
+}

@@ -1,0 +1,12 @@
+package com.qa.Library;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class LibraryTest {
+	@Test
+	public void itemListTest() {
+		Library lib = new Library();
+		lib.returnItemList();
+	}
+}

@@ -1,0 +1,14 @@
+package com.qa.GarageProject;
+
+public class Hovercraft extends Vehicle {
+
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+
+}

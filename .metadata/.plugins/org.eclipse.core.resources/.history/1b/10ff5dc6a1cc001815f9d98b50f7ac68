@@ -1,0 +1,7 @@
+package com.qa.PaintWizard;
+
+public class CheapoMax {
+	public CheapoMax(int size, double price, int coverage){
+		super(size, price,coverage); 
+	}
+}

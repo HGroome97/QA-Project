@@ -1,0 +1,14 @@
+package com.qa.GarageProject;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Garage garage = new Garage();
+		Unicycle u1 = new Unicycle();
+		garage.setGarageList(u1);
+		System.out.println(garage.getGarageList());
+		//System.out.println(u1.getClass());
+		//System.out.println(garage.calculateVehiclePrice(u1));
+	}
+
+}

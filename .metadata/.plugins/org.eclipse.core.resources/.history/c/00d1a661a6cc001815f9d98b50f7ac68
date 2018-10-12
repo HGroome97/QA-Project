@@ -1,0 +1,7 @@
+package com.qa.PaintWizard;
+
+public class AverageJoes extends Paint{
+	public  AverageJoes (){
+		super(15,17.99,11); 
+	}
+}

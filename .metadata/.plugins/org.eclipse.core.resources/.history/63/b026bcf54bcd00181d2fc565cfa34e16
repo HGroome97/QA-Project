@@ -1,0 +1,11 @@
+package com.qa.Library;
+
+public class Maps extends LibraryItem {
+	private int areaCovered;
+	
+	public Maps(int itemID,  String itemTitle, String itemDepartment, Boolean Available, int areaCovered){
+		super(itemID,  itemTitle, itemDepartment, itemAvailable); 
+		this.areaCovered = areaCovered;
+	}
+
+}

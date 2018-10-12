@@ -1,0 +1,18 @@
+package com.qa.Delegate;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Delegate d1 = new Delegate("Hello");
+		Delegate d2 = new Delegate("World");
+		d1.remove();
+		d1.changeStream();
+		d1.setUID(99);
+		System.out.println(d1.getUID());
+		System.out.println(d2.getUID());
+		d2.setUID(123);
+		System.out.println(d2.getUID());
+		
+	}
+
+}

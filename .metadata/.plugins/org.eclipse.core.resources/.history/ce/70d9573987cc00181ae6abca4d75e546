@@ -1,0 +1,11 @@
+package com.qa.GarageProject;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Unicycle u1 = new Unicycle();
+		
+		System.out.println(calculateVehiclePrice(u1));
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.qa.PaintWizard;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Paint {
+	private int size;
+	private double price;
+	private int coverage;
+	private List<Object> paintList;
+	
+	public Paint(int size, double price, int coverage) {
+		this.setSize(size);
+		this.setPrice(price);
+		this.setCoverage(coverage);
+		setPaintList(new ArrayList<>());
+	}
+
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+	public int getCoverage() {
+		return coverage;
+	}
+	public void setCoverage(int coverage) {
+		this.coverage = coverage;
+	}
+
+	public Object wastesLeast(int roomSize, List<Object> paintList) {
+		
+		return 0;
+	}
+
+	public List<Object> getPaintList() {
+		return paintList;
+	}
+
+	public void setPaintList(Object paint) {
+		this.paintList.add(paint);
+	}
+}

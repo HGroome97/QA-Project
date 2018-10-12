@@ -1,0 +1,12 @@
+package com.qa.Library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+	private List<Object> itemList;
+
+	public Library() {
+		itemList = new ArrayList<Object>();
+	}
+}

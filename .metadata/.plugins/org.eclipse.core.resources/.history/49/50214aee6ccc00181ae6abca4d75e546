@@ -1,0 +1,29 @@
+package com.qa.Delegate;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		/*Delegate d1 = new Delegate("Hello");
+		Delegate d2 = new Delegate("World");
+		d1.remove();
+		d1.changeStream();
+		d1.setUID(99);
+		System.out.println(d1.getUID());
+		System.out.println(d2.getUID());
+		d2.setUID(123);
+		System.out.println(d2.getUID());
+		System.out.println(d1.getName());
+		System.out.println(d2.getName());*/
+		
+		Person p1 = new Person("Geoff");
+		p1.setAge(21);
+		p1.setJobTitle("Bin Man");
+		p1.toString();
+		Person p2 = new Person("Jeff");
+		p2.setAge(24);
+		p2.setJobTitle("Unemployed");
+		p2.toString();
+		
+	}
+
+}

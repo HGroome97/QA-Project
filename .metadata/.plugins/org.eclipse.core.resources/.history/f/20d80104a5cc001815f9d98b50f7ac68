@@ -1,0 +1,19 @@
+package com.qa.PaintWizard;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PaintStorage {
+	private List<Object> paintList;
+	
+	public PaintStorage() {
+		paintList = new ArrayList<>();
+	}
+
+	public List<Object> getPaintList() {
+		return paintList;
+	}
+	public void setPaintList(Object paint) {
+		this.paintList.add(paint);
+	}
+}

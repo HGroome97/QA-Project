@@ -1,0 +1,32 @@
+package com.qa.Library;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+	private List<Object> itemList;
+	private List<LibraryCustomer> customerList;
+	
+
+	public Library() {
+		itemList = new ArrayList<Object>();
+		customerList = new ArrayList<LibraryCustomer>();
+	}
+
+	public List<Object> returnItemList() {
+		return itemList;
+	}
+	public void addItem(Object libItem) {
+		this.itemList.add(libItem);
+	}
+
+	
+	public List<LibraryCustomer> returnCustomerList() {
+		return customerList;
+	}
+
+	public void addCustomer(LibraryCustomer libCustomer) {
+		this.customerList.add(libCustomer);
+	}
+
+}

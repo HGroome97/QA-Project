@@ -1,0 +1,7 @@
+package com.qa.PaintWizard;
+
+public class DuluxourousPaints {
+	public DuluxourousPaints (){
+		super(21, 19.99, 10); 
+	}
+}

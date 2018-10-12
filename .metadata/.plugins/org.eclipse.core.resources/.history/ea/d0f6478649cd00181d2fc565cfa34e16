@@ -1,0 +1,45 @@
+package com.qa.Library;
+
+public abstract class LibraryItem {
+	private int itemID;
+	private String itemTitle;
+	private String itemDepartment;
+	private Boolean available;
+	
+	public LibraryItem(int itemID,  String itemTitle, String itemDepartment, Boolean available) {
+		this.setItemID(itemID);
+		this.setItemTitle(itemTitle);
+		this.setItemDepartment(itemDepartment);
+		this.setAvailable(available);
+	}
+
+	public int getItemID() {
+		return itemID;
+	}
+	public void setItemID(int itemID) {
+		this.itemID = itemID;
+	}
+
+	public String getItemTitle() {
+		return itemTitle;
+	}
+	public void setItemTitle(String itemTitle) {
+		this.itemTitle = itemTitle;
+	}
+
+	public String getItemDepartment() {
+		return itemDepartment;
+	}
+	public void setItemDepartment(String itemDepartment) {
+		this.itemDepartment = itemDepartment;
+	}
+
+	
+	public Boolean getAvailable() {
+		return available;
+	}
+
+	public void setAvailable(Boolean available) {
+		this.available = available;
+	}	
+}

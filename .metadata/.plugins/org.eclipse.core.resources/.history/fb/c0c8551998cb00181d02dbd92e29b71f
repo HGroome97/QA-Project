@@ -1,0 +1,10 @@
+import java.awt.Frame;
+
+public class ReverseString {
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
+		numbers.stream().sorted().forEach(System.out::println);
+
+	}
+}

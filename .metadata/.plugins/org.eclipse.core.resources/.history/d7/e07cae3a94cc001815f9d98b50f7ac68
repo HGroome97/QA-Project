@@ -1,0 +1,22 @@
+package com.qa.GarageProject;
+
+public class Unicycle extends Vehicle{
+	public int frameSize;
+	
+	
+	public Unicycle(int frameSize, int price, int numWheels, String colour, int vehicleID){
+		super(price, numWheels, colour, vehicleID); 
+		this.frameSize = frameSize;
+	}
+	public void drive() {}
+	public void reverse() {}
+	public void park() {}
+	public void doTricks() {}
+
+	@Override
+	public String toString() {
+		return super.getPrice()+ " " + super.getNumWheels() + " " + super.getColour() + super.getVehicleID();
+	}
+	
+
+}

@@ -1,0 +1,35 @@
+package com.qa.PaintWizard;
+
+public class Paint {
+	private int size;
+	private double price;
+	private int coverage;
+	
+	public Paint(int size, double price, int coverage) {
+		this.setSize(size);
+		this.setPrice(price);
+		this.setCoverage(coverage);
+	}
+
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+	public int getCoverage() {
+		return coverage;
+	}
+	public void setCoverage(int coverage) {
+		this.coverage = coverage;
+	}
+}

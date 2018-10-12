@@ -1,0 +1,38 @@
+import java.util.function.BiPredicate;
+
+public class CheckString {
+	public static void main(String[] args) {
+		System.out.println(checkHardLambda("No"));
+		System.out.println(checkHardLambda("Hard Coded"));
+		System.out.println(compareStringLambda("Test", "Test"));
+		System.out.println(compareStringLambda("Test", "No"));
+		
+	}
+
+	public static boolean checkHard(String inputString) {
+		if (inputString == "Hard Coded") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static boolean compareString(String string1, String string2) {
+		if (string1 == string2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean checkHardLambda(String inputString) {
+		BiPredicate<String, String> checkHard = (a,b) -> a==b;
+		return checkHard.test(inputString, "Hard Coded");
+	}
+
+	public static boolean compareStringLambda(String string1, String string2) {
+		BiPredicate<String, String> compareString = (a,b) -> a==b;
+		return compareString.test(string1,string2);
+	}
+	
+}

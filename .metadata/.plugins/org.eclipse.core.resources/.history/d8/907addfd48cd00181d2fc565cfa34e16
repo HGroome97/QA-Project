@@ -1,0 +1,11 @@
+package com.qa.Library;
+
+public class Maps extends LibraryItem {
+	private int numPages;
+	
+	public Maps(int itemID,  String itemTitle, String itemDepartment, int numPages){
+		super(itemID,  itemTitle, itemDepartment); 
+		this.numPages = numPages;
+	}
+
+}

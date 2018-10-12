@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Admin\eclipse-workspace\Golfilocks\src\main\java\com\qa\Golfilocks\Runner.java"/>
+			<item value="C:\Users\Admin\eclipse-workspace\Doggo"/>
+			<item value="C:\Users\Admin\eclipse-workspace\Factorial\src\main\java\com\qa\Factorial"/>
+			<item value="C:\Users\Admin\eclipse-workspace\GarageProject\src\main\java\com\qa\GarageProject\Unicycle.java"/>
+			<item value="C:\Users\Admin\eclipse-workspace\Delegate"/>
+			<item value="C:\Users\Admin\eclipse-workspace\Calculator"/>
+			<item value="C:\Users\Admin\eclipse-workspace\ArrayLists\src\main\java\com\qa\ArrayLists\ArrayLists.java"/>
+			<item value="C:\Users\Admin\eclipse-workspace\Streams\src\Streams.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.qa.ProjectCal"/>
+			<item value="com.qa.Golfilocks"/>
+			<item value="com.qa.Doggo"/>
+			<item value="com.qa.Factorial"/>
+			<item value="com.qa.Library"/>
+			<item value="com.qa.BlackJack"/>
+			<item value="com.qa.GarageProject"/>
+			<item value="com.qa.Garage"/>
+			<item value="com.qa.Delegate"/>
+			<item value="com.qa.ArrayListExample"/>
+			<item value="com.qa.ArrayLists"/>
+			<item value="com.qa.deleteThis"/>
+		</list>
+		<list key="groupId">
+			<item value="com.qa"/>
+		</list>
+		<list key="artifactId">
+			<item value="ProjectCal"/>
+			<item value="Golfilocks"/>
+			<item value="Doggo"/>
+			<item value="Factorial"/>
+			<item value="Library"/>
+			<item value="BlackJack"/>
+			<item value="GarageProject"/>
+			<item value="Garage"/>
+			<item value="Delegate"/>
+			<item value="ArrayListExample"/>
+			<item value="ArrayLists"/>
+			<item value="deleteThis"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

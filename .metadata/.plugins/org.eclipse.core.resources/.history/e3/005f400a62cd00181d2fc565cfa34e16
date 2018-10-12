@@ -1,0 +1,16 @@
+package com.qa.Doggo;
+
+public class Neat {
+	String one;
+	String two;
+	String three;
+	String four;
+	String five;
+	String six;
+	String seven;
+	String eight;
+	String nine;
+	public Neat(String one,String two,String three,String four,String five,String six,String seven,String eight,String nine) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.qa.Library;
+
+public class GovernmentDocs extends LibraryItem{
+	private String govDepartment;
+	
+	public GovernmentDocs(int itemID,  String itemTitle, String itemDepartment,Boolean itemAvailable, String govDepartment){
+		super(itemID,  itemTitle, itemDepartment, itemAvailable); 
+		this.govDepartment = govDepartment;
+	}
+
+}

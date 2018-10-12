@@ -1,0 +1,8 @@
+package com.qa.Library;
+
+public abstract class LibraryItem {
+	private int itemID;
+	private String itemTitle;
+	private String itemDepartment;
+	
+}

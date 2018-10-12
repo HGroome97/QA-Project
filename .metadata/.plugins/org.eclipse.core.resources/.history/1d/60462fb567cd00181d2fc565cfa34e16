@@ -1,0 +1,56 @@
+package com.qa.Golfilocks;
+
+public class Runner {
+
+	public static void main(String[] args) {
+
+		int[][] seat = { 
+				{100, 120},
+				{297, 90},
+				{66, 110},
+				{257, 113},
+				{276, 191},
+				{280, 129},
+				{219, 163},
+				{254, 193},
+				{86, 153},
+				{206, 107},
+				{71, 137},
+				{94, 40},
+				{238, 127},
+				{52, 146},
+				{129, 197},
+				{144, 59},
+				{157, 124},
+				{210, 59},
+				{110, 54},
+				{268, 119},
+				{261, 121},
+				{12, 189},
+				{186, 108},
+				{174, 21},
+				{112, 18},
+				{54, 90},
+				{174, 52},
+				{16, 129},
+				{59, 181},
+				{290, 123},
+				{248, 132}};
+		int[] contraints = {100, 80};
+		
+		chairPorridge(contraints, seat);
+		
+		}
+	
+
+	public static void chairPorridge(int[] constraints, int[][] seat) {
+		int i;
+		for (i = 0; i < seat.length; i++) {
+			if (constraints[0] < seat[i][0] && constraints[1] > seat[i][1]) {
+				System.out.println(i+1);
+			}
+		}
+		
+	}
+
+}

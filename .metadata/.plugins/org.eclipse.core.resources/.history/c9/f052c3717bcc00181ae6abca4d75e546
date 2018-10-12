@@ -1,0 +1,15 @@
+package com.qa.Delegate;
+
+import java.awt.List;
+import java.util.stream.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class PersonManager {
+	private List personList;
+	
+	public static List<Person> searchByName(String name, List<Person> PeopleList) {
+		PeopleList = PeopleList.stream().filter(n -> n.getName()==name).collect(Collectors.toList());
+		return PeopleList;
+	}
+}

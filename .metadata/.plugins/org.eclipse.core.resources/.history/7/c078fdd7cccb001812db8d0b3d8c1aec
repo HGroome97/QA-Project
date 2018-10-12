@@ -1,0 +1,5 @@
+@FunctionalInterface
+interface calcInput<num1, num2, operation, solution> {
+	public solution apply (num1 A, num2 B, operation C); 
+}
+

@@ -1,0 +1,9 @@
+package com.qa.Library;
+
+public class Book extends LibraryItem{
+	public Book(int frameSize, int price, int numWheels, String colour, int vehicleID){
+		super(price, numWheels, colour, vehicleID); 
+		this.frameSize = frameSize;
+	}
+
+}

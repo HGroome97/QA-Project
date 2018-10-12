@@ -1,0 +1,53 @@
+package com.qa.GarageProject;
+
+public abstract  class Vehicle {
+	private int numWheels;
+	private int numSeats;
+	private int fuelType;
+	private String colour;
+	private int mileage;
+	private int vehicleID;
+	protected int price;
+	
+	public Vehicle(int price) {
+		this.price = price;
+	}
+	
+	public abstract int getPrice();
+	public abstract void drive();
+	public abstract void reverse();
+	public abstract void park();
+
+	public int getVehicleID() {
+		return vehicleID;
+	}
+
+	public void setVehicleID(int vehicleID) {
+		this.vehicleID = vehicleID;
+	}
+
+	public int getMileage() {
+		return mileage;
+	}
+
+	public void setMileage(int mileage) {
+		this.mileage = mileage;
+	}
+
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+
+	public int getFuelType() {
+		return fuelType;
+	}
+
+	public void setFuelType(int fuelType) {
+		this.fuelType = fuelType;
+	}
+	
+}

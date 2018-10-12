@@ -1,0 +1,10 @@
+package com.qa.Delegate;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Delegate d1 = new Delegate();
+		d1.remove();
+	}
+
+}

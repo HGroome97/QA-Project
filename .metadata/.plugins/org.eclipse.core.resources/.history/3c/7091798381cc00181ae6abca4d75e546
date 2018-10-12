@@ -1,0 +1,15 @@
+package com.qa.GarageProject;
+
+public class MonsterTruck extends Vehicle {
+	
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+
+
+}

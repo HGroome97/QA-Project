@@ -1,0 +1,31 @@
+package com.qa.Library;
+
+public class Runner {
+
+	public static void main(String[] args) {
+//		System.out.println(reverseFac(3628800));
+//		System.out.println(reverseFac(479001600));
+//		System.out.println(reverseFac(6));
+		System.out.println(reverseFac(18));
+
+	}
+
+	public static String reverseFac(double n) {
+		int i;
+		for (i = 2; i <= n+1; i++) {
+			System.out.println(n+ " " + i);
+			n = n / i;
+		}
+		if (i>n) {
+			return Integer.toString(i);
+		} else {
+			 return "NONE";
+		}
+	}
+
+}
+
+
+// n = 18/ 2 => i=2, n=9
+// n = 9// => i=3, n=3
+// 

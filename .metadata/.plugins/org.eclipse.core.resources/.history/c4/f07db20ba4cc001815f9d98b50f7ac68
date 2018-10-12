@@ -1,0 +1,20 @@
+package com.qa.PaintWizard;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		CheapoMax cm = new CheapoMax();
+		ThatOneWithTheDog towtd = new ThatOneWithTheDog();
+		AverageJoes aj = new AverageJoes();
+		DuluxourousPaints dp = new DuluxourousPaints();
+		
+		Paint paint = new Paint(0,0,0);
+		paint.setPaintList(cm);
+		paint.setPaintList(towtd);
+		paint.setPaintList(aj);
+		paint.setPaintList(dp);
+		
+		System.out.println(paint.getPaintList());
+	}
+
+}

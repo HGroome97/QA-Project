@@ -1,0 +1,15 @@
+
+public class CheckString {
+	public static void main(String[] args) {
+		System.out.println(checkHard("No"));
+		System.out.println(checkHard("Hard Coded"));
+	}
+
+	public static boolean checkHard(String inputString) {
+		if(inputString == "Hard Coded") {
+			return true;
+		}else {
+			return false;
+		}
+	}
+}

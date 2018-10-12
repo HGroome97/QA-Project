@@ -1,0 +1,26 @@
+
+public class CheckString {
+	public static void main(String[] args) {
+		System.out.println(checkHard("No"));
+		System.out.println(checkHard("Hard Coded"));
+		System.out.println(compareString("Test", "Test"));
+		System.out.println(compareString("Test", "No"));
+		
+	}
+
+	public static boolean checkHard(String inputString) {
+		if (inputString == "Hard Coded") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static boolean compareString(String string1, String string2) {
+		if (string1 == string2) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}

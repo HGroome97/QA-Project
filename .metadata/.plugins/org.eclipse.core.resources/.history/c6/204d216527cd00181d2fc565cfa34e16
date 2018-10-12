@@ -1,0 +1,27 @@
+package com.qa.PaintWizard;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class PaintStorage {
+	private List<Object> paintList;
+
+	public PaintStorage() {
+		paintList = new ArrayList<>();
+	}
+
+	public List<Object> getPaintList() {
+		return paintList;
+	}
+	public void setPaintList(Object paint) {
+		this.paintList.add(paint);
+	}
+
+	public Object wastesLeast(int roomSize, List<Paint> paintList) {
+		List<Object> tempList = new ArrayList<>();
+		//paintList = paintList.stream().filter(predicate);
+		return 0;
+	}
+
+}

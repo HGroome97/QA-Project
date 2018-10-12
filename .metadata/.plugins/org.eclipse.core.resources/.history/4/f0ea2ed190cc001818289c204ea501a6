@@ -1,0 +1,25 @@
+package com.qa.GarageProject;
+
+public class Unicycle extends Vehicle{
+	public int frameSize;
+		
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+	
+	public void doTricks() {
+		
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

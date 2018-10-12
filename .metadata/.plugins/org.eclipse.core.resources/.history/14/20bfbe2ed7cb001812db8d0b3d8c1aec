@@ -1,0 +1,4 @@
+
+public interface MathsOperation {
+	double operate(int a, int b);
+}

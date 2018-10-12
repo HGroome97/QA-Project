@@ -1,0 +1,29 @@
+import java.util.function.Consumer;
+
+//import java.util.function;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		HelloWorld();
+	}
+
+	public static void HelloWorld() {
+		System.out.println("Hello World");
+	}
+
+	interface messageOutput extends Consumer<String> {
+
+		@Override
+		default void accept(String t) {
+			System.out.println("Hello " + t);
+		}
+		
+	}
+	
+	public static void HelloWorldMessage() {
+		messageOutput message1 = message -> System.out.println(message);
+
+	}
+
+}

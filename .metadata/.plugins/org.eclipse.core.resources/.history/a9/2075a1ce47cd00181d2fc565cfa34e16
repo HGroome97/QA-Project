@@ -1,0 +1,58 @@
+package com.qa.Library;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+import org.junit.Test;
+
+public class LibraryTest {
+	@Test
+	public void itemListTest() {
+		Library lib = new Library();
+		lib.returnItemList();
+	}
+	@Test
+	public void customerListTest() {
+		Library lib = new Library();
+		lib.returnCustomerList();
+	}
+
+	@Test
+	public void addItemTest() {
+		Library lib = new Library();
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", 123);
+		lib.addItem(libBook);
+		assertNotNull(lib.returnItemList());
+	}
+	@Test
+	public void addCustomerTest() {
+		Library lib = new Library();
+		LibraryCustomer libCust = new LibraryCustomer();
+		lib.addCustomer(libCust);
+		assertNotNull(lib.returnCustomerList());
+	}
+
+	@Before
+	@Test
+	public void getItemIDTest() {
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", 123);
+		assertEquals("ID Match", 1, libBook.getItemID());
+	}
+	@Test
+	public void setItemIDTest() {
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", 123);
+		libBook.setItemID(2);
+		assertEquals("Changed ID", 2, libBook.getItemID());
+	}
+
+	@Before
+	@Test
+	public void getTitleTest() {
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", 123);
+		assertEquals("ID Match", 1, libBook.getItemID());
+	}
+	@Test
+	public void setTitleTest() {
+		
+	}
+}

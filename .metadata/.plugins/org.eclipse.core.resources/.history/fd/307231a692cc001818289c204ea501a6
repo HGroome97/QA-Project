@@ -1,0 +1,30 @@
+package com.qa.GarageProject;
+
+public class Hovercraft extends Vehicle {
+	
+	public int takeOffDistance;
+	
+	public Hovercraft(int price) {
+		super(price);
+	}
+
+	
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+	
+	public void liftOff() {
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

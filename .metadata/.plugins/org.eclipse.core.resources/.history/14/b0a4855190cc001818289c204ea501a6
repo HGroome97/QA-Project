@@ -1,0 +1,21 @@
+package com.qa.GarageProject;
+
+public abstract class Vehicle {
+	private int numWheels;
+	private int numSeats;
+	private int fuelType;
+	private String colour;
+	private int mileage;
+	private int vehicleID;
+	private int price;
+	
+	public Vehicle(int price) {
+		this.price = price;
+	}
+	
+	public abstract int getPrice();
+	public abstract void drive();
+	public abstract void reverse();
+	public abstract void park();
+	
+}

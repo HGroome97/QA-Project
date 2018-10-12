@@ -1,0 +1,26 @@
+package com.qa.GarageProject;
+
+public class MonsterTruck extends Vehicle {
+	private int regPlate;
+	
+	public MonsterTruck() {
+		price = 24;
+	}
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+
+	public void jump() {
+		
+	}
+	
+	public int getPrice() {
+		return this.price;
+	}
+
+}

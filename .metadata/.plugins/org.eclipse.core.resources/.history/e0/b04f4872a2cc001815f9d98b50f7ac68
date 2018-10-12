@@ -1,0 +1,10 @@
+package com.qa.PaintWizard;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		CheapoMax cm = new CheapoMax();
+		System.out.println(cm.getPrice());
+	}
+
+}

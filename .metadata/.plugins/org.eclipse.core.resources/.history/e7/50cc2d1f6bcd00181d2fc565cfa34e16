@@ -1,0 +1,27 @@
+package com.qa.ProjectCal;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		calcPrint(4,2,8);
+
+	}
+	public static void calcPrint(int num1, int num2, int num3) {
+		int i =0;
+		while(i<3) {
+			if(num1+num2==num3) System.out.println(num1+" + "+num2+" = "+num3);
+			if(num1*num2==num3) System.out.println(num1+" * "+num2+" = "+num3);
+			if(num1/num2==num3) System.out.println(num1+" / "+num2+" = "+num3);
+			if(num2/num1==num3) System.out.println(num2+" / "+num1+" = "+num3);
+			if(num1-num2==num3) System.out.println(num1+" - "+num2+" = "+num3);
+			if(num2-num1==num3) System.out.println(num2+" - "+num1+" = "+num3);
+			
+			num1=num2;
+			num2=num3;
+			num3=num1;
+			i++;	
+			}
+			
+		}
+}
+

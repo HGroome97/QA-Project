@@ -1,0 +1,14 @@
+package com.qa.GarageProject;
+
+public class Unicycle extends Vehicle{
+
+	public void drive() {
+	}
+
+	public void reverse() {
+	}
+
+	public void park() {
+	}
+
+}
