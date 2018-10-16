@@ -40,17 +40,25 @@ public class Game {
 	public void move(String moveInput) {
 		switch (moveInput.trim().toLowerCase()) {
 		case "north":
-			currentPosition[0]--;
-			break;
+			if(currentPosition[0]!=0) {
+				currentPosition[0]--;
+				break;
+			}
 		case "south":
-			currentPosition[0]++;
-			break;
+			if(currentPosition[0]!=grid.getYValue()) {
+				currentPosition[0]++;
+				break;
+			}
 		case "west":
-			currentPosition[1]--;
-			break;
+			if(currentPosition[1]!=0) {
+				currentPosition[1]--;
+				break;
+			}
 		case "east":
-			currentPosition[1]++;
-			break;
+			if(currentPosition[1]!=0) {
+				currentPosition[1]++;
+				break;
+			}
 		default:
 			System.out.println("Invalid Move");
 			break;
@@ -59,11 +67,11 @@ public class Game {
 	}
 
 	public void updateDetails() {
-		/*for(int i = 0; i < grid.getXValue(); i++) {
+		for(int i = 0; i < grid.getXValue(); i++) {
 			for(int j = 0; j < grid.getYValue(); j++) {
-				System.out.println(gameMap[i][0] + " " + gameMap[i][1]);
+				System.out.println(Integer.valueOf(gameMap[i][0].trim()) + " " + Integer.valueOf(gameMap[i][1].trim()));
 			}
-		}*/
+		}
 		
 		for (int i = 0; i < grid.getMapSize(); i++) {
 			if (currentPosition[0] == Integer.valueOf(gameMap[i][0].trim())){

@@ -1,5 +1,12 @@
 package com.qa.Library;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.BiPredicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
 public abstract class LibraryItem {
 	private int itemID;
 	private String itemTitle;
@@ -34,7 +41,6 @@ public abstract class LibraryItem {
 		this.itemDepartment = itemDepartment;
 	}
 
-	
 	public Boolean getItemAvailable() {
 		return itemAvailable;
 	}

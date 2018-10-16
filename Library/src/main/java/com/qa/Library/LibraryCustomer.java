@@ -41,4 +41,8 @@ public class LibraryCustomer {
 		this.customerPhoneNumber = customerPhoneNumber;
 	}
 
+	@Override
+	public String toString() {
+		return this.getCustomerID() + ", " + this.getCustomerName() + ", " + this.getCustomerAddress() + ", " + this.getCustomerPhoneNumber();
+	}
 }

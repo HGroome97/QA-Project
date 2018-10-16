@@ -1,0 +1,78 @@
+package com.qa.Library;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.function.BiPredicate;
+import java.util.stream.Collectors;
+
+public class Library {
+	private List<LibraryItem> itemList;
+	private List<LibraryCustomer> customerList;
+	
+	public Library() {
+		itemList = new ArrayList<LibraryItem>();
+		customerList = new ArrayList<LibraryCustomer>();
+	}
+
+	public List<LibraryItem> returnItemList() {
+		return itemList;
+	}
+	public void addItem(LibraryItem libItem) {
+		this.itemList.add(libItem);
+	}
+
+	public List<LibraryCustomer> returnCustomerList() {
+		return customerList;
+	}
+	public void addCustomer(LibraryCustomer libCustomer) {
+		this.customerList.add(libCustomer);
+	}
+	
+	public void itemCheckIn(LibraryItem libItem) {
+		libItem.setItemAvailable(true);
+	}
+	public void itemCheckOut(LibraryItem libItem) {
+		libItem.setItemAvailable(false);
+	}
+	
+	public void deleteItem(String itemTitle) {
+		BiPredicate<String, String> compareString = (a,b) -> a!=b;
+		itemList = itemList.stream().filter(n->compareString.test(itemTitle, n.getItemTitle())).collect(Collectors.toList());
+	}
+	public void deleteItem(int itemID) {
+		BiPredicate<Integer, Integer> compareInt = (a,b) -> a!=b;
+		itemList = itemList.stream().filter(n->compareInt.test(itemID, n.getItemID())).collect(Collectors.toList());
+	}
+
+	public void deleteCustomer(String name) {
+		BiPredicate<String, String> compareString = (a,b) -> a!=b;
+		customerList = customerList.stream().filter(n->compareString.test(name, n.getCustomerName())).collect(Collectors.toList());
+	}
+	public void deleteCustomer(int customerID) {
+		BiPredicate<Integer, Integer> compareInt = (a,b) -> a!=b;
+		customerList = customerList.stream().filter(n->compareInt.test(customerID, n.getCustomerID())).collect(Collectors.toList());
+	}
+	
+	public void writeToFile() {
+		String timeStamp = new SimpleDateFormat("yyyy-MM-dd@HH-mm-ss").format(Calendar.getInstance().getTime());
+		File libFile = new File("libData" + timeStamp + ".txt");
+		try {
+			libFile.createNewFile();
+			FileWriter write = new FileWriter(libFile,true);
+			PrintWriter print_line = new PrintWriter(write);
+			for(int i = 0; i < itemList.size(); i++) {
+				print_line.printf("%s"+"%n", itemList.get(i));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

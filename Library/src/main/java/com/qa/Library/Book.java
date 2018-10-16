@@ -17,7 +17,7 @@ public class Book extends LibraryItem{
 	
 	@Override
 	public String toString() {
-		return super.getItemID() + " " + super.getItemTitle() + " " + super.getItemDepartment() + " " + super.getItemAvailable() + " " + this.getNumPages();
+		return super.getItemID() + ", " + super.getItemTitle() + ", " + super.getItemDepartment() + ", " + super.getItemAvailable() + ", " + this.getNumPages();
 	}
 
 }

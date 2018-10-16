@@ -1,0 +1,53 @@
+package com.qa.Library;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BiPredicate;
+import java.util.stream.Collectors;
+
+public class Library {
+	private List<LibraryItem> itemList;
+	private List<LibraryCustomer> customerList;
+	
+	public Library() {
+		itemList = new ArrayList<LibraryItem>();
+		customerList = new ArrayList<LibraryCustomer>();
+	}
+
+	public List<LibraryItem> returnItemList() {
+		return itemList;
+	}
+	public void addItem(LibraryItem libItem) {
+		this.itemList.add(libItem);
+	}
+
+	
+	public List<LibraryCustomer> returnCustomerList() {
+		return customerList;
+	}
+
+	public void addCustomer(LibraryCustomer libCustomer) {
+		this.customerList.add(libCustomer);
+	}
+	
+	public void itemCheckIn(LibraryItem libItem) {
+		libItem.setItemAvailable(true);
+	}
+	public void itemCheckOut(LibraryItem libItem) {
+		libItem.setItemAvailable(false);
+	}
+	
+	public void deleteItem(String itemTitle) {
+		String t = "";
+		List<String> itemTitleList = new ArrayList<String>();
+		BiPredicate<String, String> compareString = (a,b) -> a==b;
+		itemTitleList = itemList.stream().map(n->n.getItemTitle()).collect(Collectors.toList());
+		itemTitleList = itemTitleList.stream().filter(n->compareString.test(itemTitle, n)).collect(Collectors.toList());
+		System.out.println(itemTitleList);
+		compareString.test(itemTitle,t);
+	}
+	public void deleteItem(Library lib, int itemID) {
+		
+	}
+
+}

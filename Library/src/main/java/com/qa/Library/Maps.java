@@ -17,7 +17,7 @@ public class Maps extends LibraryItem {
 	
 	@Override
 	public String toString() {
-		return super.getItemID() + " " + super.getItemTitle() + " " + super.getItemDepartment() + " " + super.getItemAvailable() + " " + this.getAreaCovered();
+		return super.getItemID() + ", " + super.getItemTitle() + ", " + super.getItemDepartment() + ", " + super.getItemAvailable() + ", " + this.getAreaCovered();
 	}
 	
 }

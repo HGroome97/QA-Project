@@ -2,6 +2,8 @@ package com.qa.Library;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+
 import org.junit.*;
 import org.junit.Test;
 
@@ -26,11 +28,58 @@ public class LibraryTest {
 		assertNotNull(lib.returnItemList());
 	}
 	@Test
+	public void deleteItemTestTitle() {
+		Library lib = new Library();
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", true, 123);
+		Book libBook2 = new Book(3, "Java for Experts", "I.T.", true, 1234);
+		Maps libMap = new Maps(2, "Map of England", "Stats", true, 24);
+		lib.addItem(libBook);
+		lib.addItem(libMap);
+		lib.addItem(libBook2);
+		lib.deleteItem("Java for Dummies");
+		assertEquals("Delete item by name",2,lib.returnItemList().size());
+	}
+	@Test
+	public void deleteItemTestID() {
+		Library lib = new Library();
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", true, 123);
+		Book libBook2 = new Book(3, "Java for Experts", "I.T.", true, 1234);
+		Maps libMap = new Maps(2, "Map of England", "Stats", true, 24);
+		lib.addItem(libBook);
+		lib.addItem(libMap);
+		lib.addItem(libBook2);
+		lib.deleteItem(2);
+		assertEquals("Delete item by ID",2,lib.returnItemList().size());
+	}
+	
+	@Test
 	public void addCustomerTest() {
 		Library lib = new Library();
 		LibraryCustomer libCust = new LibraryCustomer(1, "Jeff", "QA Academy", "999");
 		lib.addCustomer(libCust);
 		assertNotNull(lib.returnCustomerList());
+	}
+	@Test
+	public void deleteCustomerTestTitle() {
+		Library lib = new Library();
+		LibraryCustomer libCust = new LibraryCustomer(1, "Jeff", "QA Academy", "999");
+		LibraryCustomer libCust2 = new LibraryCustomer(2, "Dave", "QA Academy", "321");
+
+		lib.addCustomer(libCust);
+		lib.addCustomer(libCust2);
+		lib.deleteCustomer("Dave");
+		assertEquals("Delete cust by name",1,lib.returnCustomerList().size());
+	}
+	@Test
+	public void deleteCustomerTestID() {
+		Library lib = new Library();
+		LibraryCustomer libCust = new LibraryCustomer(1, "Jeff", "QA Academy", "999");
+		LibraryCustomer libCust2 = new LibraryCustomer(2, "Dave", "QA Academy", "321");
+
+		lib.addCustomer(libCust);
+		lib.addCustomer(libCust2);
+		lib.deleteCustomer(2);
+		assertEquals("Delete cust by ID",1,lib.returnCustomerList().size());
 	}
 	
 	@Before
@@ -98,5 +147,30 @@ public class LibraryTest {
 		Book libBook = new Book(1, "Java for Dummies", "I.T.", true, 123);
 		lib.itemCheckOut(libBook);
 		assertEquals("check in", false, libBook.getItemAvailable());
+	}
+
+	@Test
+	public void writeToFileTest() {
+		Library lib = new Library();
+		
+		Book libBook = new Book(1, "Java for Dummies", "I.T.", true, 123);
+		Book libBook2 = new Book(3, "Java for Experts", "I.T.", true, 1234);
+		Maps libMap = new Maps(2, "Map of England", "Stats", true, 24);
+		lib.addItem(libBook);
+		lib.addItem(libMap);
+		lib.addItem(libBook2);
+		
+		LibraryCustomer libCust = new LibraryCustomer(1, "Jeff", "QA Academy", "999");
+		LibraryCustomer libCust2 = new LibraryCustomer(2, "Dave", "QA Academy", "321");
+		lib.addCustomer(libCust);
+		lib.addCustomer(libCust2);
+		
+		lib.writeToFile();
+	}
+	
+	@Test
+	public void readFromFile() {
+		Library lib = new Library();
+		lib.readFromFile();
 	}
 }

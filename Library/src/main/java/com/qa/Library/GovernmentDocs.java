@@ -17,6 +17,6 @@ public class GovernmentDocs extends LibraryItem{
 
 	@Override
 	public String toString() {
-		return super.getItemID() + " " + super.getItemTitle() + " " + super.getItemDepartment() + " " + super.getItemAvailable() + " " + this.getGovDepartment();
+		return super.getItemID() + ", " + super.getItemTitle() + ", " + super.getItemDepartment() + ", " + super.getItemAvailable() + ", " + this.getGovDepartment();
 	}
 }
